@@ -1,0 +1,127 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Questions</title>
+    <script src="/socket.io/socket.io.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css'>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.7/js/tether.min.js' defer></script>
+    <script src='https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js' defer></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <script>
+        const ISADMIN = sessionStorage.getItem('logged-in');
+    </script>
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <div class="text-center">
+        <h1 class='display-5'>Questions</h1>
+    </div>
+
+    <div class="navbar">
+        <div class="navbar-button col text-center">
+            Home
+        </div>
+        <div class="navbar-button col text-center">
+            Info
+        </div>
+        <div class="navbar-button col text-center">
+            Examples
+        </div>
+        <div class="navbar-button col text-center">
+            Form
+        </div>
+        <div class="navbar-button col text-center">
+            Questions
+        </div>
+        <div class="navbar-button col text-center">
+            Socials
+        </div>
+    </div>
+    <div class="navbar-m">
+        <div class="navbar-button col-sm text-center">
+            Home
+        </div>
+        <div class="navbar-button col-sm text-center">
+            Info
+        </div>
+        <div class="navbar-button col-sm text-center">
+            Examples
+        </div>
+        <div class="navbar-button col-sm text-center">
+            Form
+        </div>
+        <div class="navbar-button col-sm text-center">
+            Questions
+        </div>
+        <div class="navbar-button col-sm text-center">
+            Socials
+        </div>
+    </div>
+
+    <div class="container mt-3 text-center">
+        <h1 class="animating-logo">|</h1>
+        <div class="main-desc">
+
+            <div class="row">
+                <div class="col-2">
+                    <div class="btn-link">
+                        <h2>
+                            <a href="/createquestion">
+                                Create <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                            </a>
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <h1>Ask and get answers to your questions here!</h1>
+                </div>
+                <div class="col-2">
+                    <div class="btn-link">
+                        <h2>
+                            <a href="/login">
+                                <i class="fa fa-user-circle" aria-hidden="true"></i> Login 
+                            </a>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-left">
+                <% for( let i = 0; i < questions.length; i++ ) { %>
+                    <div class="question-box m-5 row">
+                        <div class="col-1" >
+                        <% if (questions[i].answer != '') { %>
+                            <div class="connection-arrow">
+                                <div class="connection-line"></div>
+                                <div class="connection-line line-2"></div>
+                            </div>
+                            <% } %>
+                        </div>
+                        <div class="col">
+                            <div class="question" id='q<%= i %>'>
+                                <div class="controls"></div>
+                                <h2><%= questions[i].user %></h2>
+                                <h3 class="questionthing"><%= questions[i].question %></h3>
+                            </div>
+                            <% if (questions[i].answer != '') { %>
+                                <div class="answer" id='a<%= i %>'>
+                                    <h3>Answer: <%= questions[i].answer %></h3>
+                                </div>
+                            <% } %>
+                        </div>
+                    </div>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

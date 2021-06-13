@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@300&display=swap");
+* {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  margin: 0;
+  padding: 0%;
+}
+
+body {
+  background: -webkit-gradient(linear, left bottom, left top, from(#22c1c3), to(#2d77fd));
+  background: linear-gradient(0deg, #22c1c3 0%, #2d77fd 100%);
+  text-align: center;
+  font-size: 90%;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+.btn-back {
+  border: none;
+}
+
+.btn-back:hover {
+  color: #00e1ff;
+  cursor: pointer;
+}
+
+button {
+  background: none;
+  color: blue;
+  float: right;
+}
+
+.btn-submit {
+  font-size: 300%;
+  width: 40%;
+  border: solid 2px #00e1ff;
+  background-color: black;
+  color: #00e1ff;
+  margin: 0.5em;
+}
+
+.question {
+  border: #00e1ff 2px solid;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 1em;
+}
+
+.question h3 {
+  color: #00e1ff;
+}
+
+.answer {
+  border: #00e1ff 2px solid;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 1em;
+}
+
+.answer h3 {
+  color: #00e1ff;
+}
+
+.connection-arrow {
+  background: blue;
+  width: 3px;
+  margin: auto;
+  margin-top: 100%;
+  height: 53%;
+}
+
+.connection-arrow .connection-line {
+  width: 2000%;
+  height: 3px;
+  background: blue;
+}
+
+.connection-arrow .line-2 {
+  margin-top: 3400%;
+}
+
+.main-title {
+  font-size: 132%;
+}
+
+.email-question {
+  text-align: left;
+  font-size: 40px;
+}
+
+.first-name {
+  font-size: 40px;
+}
+
+input {
+  padding: 0.5em;
+  border: 2px solid #00e1ff;
+  background: black;
+  color: #00e1ff;
+}
+
+input:focus {
+  outline: none;
+}
+
+input::-webkit-input-placeholder {
+  color: #00e1ff;
+}
+
+input:-ms-input-placeholder {
+  color: #00e1ff;
+}
+
+input::-ms-input-placeholder {
+  color: #00e1ff;
+}
+
+input::placeholder {
+  color: #00e1ff;
+}
+
+textarea {
+  resize: none;
+  padding: 1em;
+  border: solid 2px #00e1ff;
+  background: black;
+  color: #00e1ff;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+textarea::-webkit-input-placeholder {
+  color: #00e1ff;
+}
+
+textarea:-ms-input-placeholder {
+  color: #00e1ff;
+}
+
+textarea::-ms-input-placeholder {
+  color: #00e1ff;
+}
+
+textarea::placeholder {
+  color: #00e1ff;
+}
+
+li {
+  list-style: none;
+  padding: 1em;
+}
+
+.home-main-desc {
+  text-align: left;
+  padding: 0.1em;
+}
+
+.sociallink {
+  border: 2px solid #00e1ff;
+  min-width: 60%;
+  margin: auto;
+  font-size: 150%;
+}
+
+.navbar {
+  display: none;
+}
+
+.navbar * {
+  display: none;
+}
+
+.navbar-m {
+  width: 95%;
+  margin: auto;
+  min-height: 3em;
+  background: black;
+  font-size: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navbar-m .navbar-button {
+  padding: 0.2em;
+}
+
+.main-desc {
+  min-width: 90%;
+  min-height: 60%;
+  border: 1px solid black;
+  margin: auto;
+  background-color: black;
+  color: blue;
+}
+
+.login-form {
+  height: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar-button {
+  color: blue;
+  padding: 0.5em 0.7em;
+  font-size: 1.5em;
+  border: solid 2px black;
+}
+
+.navbar-button:hover {
+  cursor: pointer;
+  border: solid 2px #00e1ff;
+}
+
+.btn-link {
+  border: 2px solid #00e1ff;
+}
+
+.btn-link:hover {
+  cursor: pointer;
+}
+
+#google-form {
+  width: 90%;
+  height: 50%;
+}
+
+@media only screen and (min-width: 786px) {
+  .navbar-m {
+    display: none;
+  }
+  .navbar {
+    width: 80%;
+    margin: auto;
+    min-height: 2.5em;
+    background: black;
+    padding: 0.5em;
+    font-size: 80%;
+  }
+  .navbar * {
+    display: block;
+  }
+  .main-title {
+    font-size: 250%;
+  }
+  .sociallink {
+    font-size: 200%;
+  }
+  #google-form {
+    width: 50%;
+    height: 50%;
+  }
+}
+
+/* PC */
+@media only screen and (min-width: 1000px) {
+  body {
+    font-size: 150%;
+  }
+  .navbar-m {
+    display: none;
+  }
+  .navbar-button {
+    padding: 0.5em 1em;
+    font-size: 1.5em;
+  }
+  .navbar {
+    width: 80%;
+    margin: auto;
+    min-height: 2.5em;
+    background: black;
+    padding: 0.5em;
+    font-size: 80%;
+  }
+  .home-main-desc {
+    text-align: left;
+    padding: 0.5em;
+  }
+}
+/*# sourceMappingURL=style.css.map */

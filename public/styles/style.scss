@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@300&display=swap');
+
+$primary-backround: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(45,119,253,1) 100%);
+
+* {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    margin: 0;
+    padding: 0%;
+}
+
+body {
+    background: $primary-backround;
+    text-align: center;
+    font-size: 90%;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+.btn-back {
+    border: none;
+    &:hover {
+        color: rgb(0, 225, 255); 
+        cursor: pointer;
+    }
+}
+
+button {
+    background: none;
+    color: blue;
+    float: right;
+}
+
+.btn-submit {
+    font-size: 300%;
+    width: 40%;
+    border: solid 2px rgb(0, 225, 255);
+    background-color: black;
+    color: rgb(0, 225, 255);
+    margin: 0.5em;
+} 
+
+.question {
+    border: rgb(0, 225, 255) 2px solid;
+    width: max-content;
+    padding: 1em;
+
+    h3 {
+        color: rgb(0, 225, 255);
+    }
+}
+
+.answer {
+    border: rgb(0, 225, 255) 2px solid;
+    width: max-content;
+    padding: 1em;
+
+    h3 {
+        color: rgb(0, 225, 255);
+    }
+}
+
+
+.connection-arrow {
+    background: blue;
+    width: 3px;
+    margin: auto;
+    margin-top: 100%;
+    height: 53%;
+
+    .connection-line {
+        width: 2000%;
+        height: 3px;
+        background: blue;
+    }
+
+    .line-2 {
+        margin-top: 3400%;
+    }
+}
+
+.main-title {
+    font-size: 132%;
+}
+
+.email-question {
+    text-align: left;
+    font-size: 40px;
+}
+
+.first-name {
+    font-size: 40px;
+}
+
+input {
+    padding: 0.5em;
+    border: 2px solid rgb(0, 225, 255);
+    background: black;
+    color: rgb(0, 225, 255);
+
+    &:focus {
+        outline: none;
+    }
+    &::placeholder {
+        color: rgb(0, 225, 255);
+    }
+}
+
+textarea {
+    resize: none;
+    padding: 1em;
+    border: solid 2px rgb(0, 225, 255);
+    background: black;
+    color: rgb(0, 225, 255);
+
+    &:focus {
+        outline: none;
+    }
+    &::placeholder {
+        color: rgb(0, 225, 255);
+    }
+}
+
+li {
+    list-style: none;
+    padding: 1em;
+}
+
+.home-main-desc {
+    text-align: left;
+    padding: 0.1em;
+}
+
+.sociallink {
+    border: 2px solid rgb(0, 225, 255);
+    min-width: 60%;
+    margin: auto;
+    font-size: 150%;
+}
+
+.navbar {
+    display: none;
+    * {
+        display: none;
+    }
+}
+
+.navbar-m {
+    width: 95%;
+    margin: auto;
+    min-height: 3em; 
+    background: black;
+    font-size: 80%;
+    display: flex;
+    .navbar-button {
+        padding: 0.2em;
+    }
+}
+
+.main-desc {
+    min-width: 90%;
+    min-height: 60%;
+    border: 1px solid black;
+    margin: auto;
+    background-color: black;
+    color: blue;
+}
+
+
+.login-form {
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-button {
+    color: blue;
+    padding: 0.5em 0.7em;
+    font-size: 1.5em;
+    border: solid 2px black;
+
+    &:hover {
+        cursor: pointer; 
+        border: solid 2px rgb(0, 225, 255);
+    }
+}
+
+.btn-link {
+    border: 2px solid rgb(0, 225, 255);
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+#google-form {
+    width: 90%;
+    height: 50%;
+}
+
+@media only screen and (min-width: 786px) {
+
+    .navbar-m {
+        display: none;
+    }
+    .navbar {
+        width: 80%;
+        margin: auto;
+        min-height: 2.5em; 
+        background: black;
+        padding: 0.5em;
+        font-size: 80%;
+        * {
+            display: block;
+        }
+    }
+
+    .main-title {
+        font-size: 250%;
+    }
+
+    .sociallink {
+        font-size: 200%;
+    }
+    
+
+    #google-form {
+        width: 50%;
+        height: 50%;
+    }
+}
+
+/* PC */
+
+@media only screen and (min-width: 1000px) {
+    body {
+        font-size: 150%;
+    }
+
+    .navbar-m {
+        display: none;
+    }
+
+    .navbar-button {
+       
+        padding: 0.5em 1em;
+        font-size: 1.5em;
+        
+        
+    }
+
+    .navbar {
+        width: 80%;
+        margin: auto;
+        min-height: 2.5em; 
+        background: black;
+        padding: 0.5em;
+        font-size: 80%;
+    }
+
+    .home-main-desc {
+        text-align: left;
+        padding: 0.5em;
+    }
+}
