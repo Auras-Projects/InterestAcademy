@@ -1,9 +1,14 @@
 const express = require('express');
 const app = express()
+const https = require('https');
 const config = require("./config")
-const server = app.listen(config.PORT, ()=> {console.log(`Website running on http://localhost:${config.PORT}`)})
-const io = require('socket.io')(server);
 const fs = require('fs');
+//const server = app.listen(config.PORT, () => {console.log(`Website running on http://localhost:${config.PORT}`)})
+const server = https.createServer({
+    key: fs.readFileSync('cert/key.pem'),
+    cert: fs.readFileSync('cert/cert.pem')
+}, app).listen(config.PORT, () => console.log(`Website running on http://localhost:${config.PORT}`));
+const io = require('socket.io')(server);
 const QUESTIONS = 'questions.json';
 
 app.set("view engine", 'ejs')
@@ -83,4 +88,6 @@ io.on('connection', socket => {
 
         socket.emit('deleted-question')
     })
+
+    socket.on('test', (t) => console.log(t))
 })
